@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBridge Pro | National Logistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FoodBridge: National Logistics</h1>
+
+    <section id="donor-section">
+        <h2>Post a Donation</h2>
+        <form id="foodForm">
+            <input type="text" id="donorName" placeholder="Your Name (Donor/Hotel Name)" required>
+            <input type="tel" id="contactNumber" placeholder="Contact Number" required>
+            <input type="text" id="foodName" placeholder="Food Item (e.g. Rice)" required>
+            <input type="text" id="quantity" placeholder="Quantity" required>
+            <input type="text" id="cityInput" placeholder="Your City (e.g. Hyderabad)" required>
+            
+            <select id="urgencyLevel">
+                <option value="Normal">Normal Priority</option>
+                <option value="Urgent">🚨 Urgent (Expiring Soon)</option>
+            </select>
+
+            <button type="submit">Broadcast to India</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="ngo-section">
+        <h2>Live Feed for NGOs</h2>
+        <div class="filter-bar">
+            <label>Show food available in:</label>
+            <input type="text" id="ngoCityFilter" value="ballari" oninput="updateFeed()">
+        </div>
+        <div id="foodList"></div>
+    </section>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

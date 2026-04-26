@@ -1,0 +1,31 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: auto; padding: 20px; background: #f0f2f5; color: #333; }
+h1 { text-align: center; color: #28a745; }
+form { display: flex; flex-direction: column; gap: 12px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+input, select { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
+button { padding: 12px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+button:hover { background: #218838; }
+
+.donation-card { 
+    background: white; 
+    padding: 20px; 
+    margin-top: 15px; 
+    border-radius: 10px; 
+    border-left: 8px solid #28a745; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.urgent-card { 
+    border: 2px solid #dc3545 !important;
+    border-left: 8px solid #dc3545 !important;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+.claimed-card { border-left: 8px solid #ffc107 !important; background: #fff3cd; }
+.claimed-btn { background: #6c757d; }
+a { color: #007bff; text-decoration: none; font-weight: bold; }
